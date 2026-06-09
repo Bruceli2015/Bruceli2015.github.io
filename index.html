@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages 导航</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #2563eb 0%, #ffffff 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            padding: 20px;
+        }
+
+        .glass-btn {
+            width: 320px;
+            padding: 18px 0;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 
+                0 8px 32px rgba(37, 99, 235, 0.15),
+                inset 0 0 12px rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 500;
+            color: #0f3472;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .glass-btn::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.4) 50%,
+                transparent 70%
+            );
+            animation: liquid-flow 4s linear infinite;
+        }
+
+        @keyframes liquid-flow {
+            0% { transform: translate(-25%, -25%) rotate(0deg); }
+            100% { transform: translate(-25%, -25%) rotate(360deg); }
+        }
+
+        .glass-btn:hover {
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.35);
+            box-shadow: 
+                0 12px 40px rgba(37, 99, 235, 0.22),
+                inset 0 0 16px rgba(255, 255, 255, 0.45);
+        }
+
+        .glass-btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-text {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <a class="glass-btn" href="https://bruceli2015.github.io/Kaomoji/" target="_blank">
+        <span class="btn-text">Kaomoji</span>
+    </a>
+    <a class="glass-btn" href="https://bruceli2015.github.io/clickkeyboard/" target="_blank">
+        <span class="btn-text">clickkeyboard</span>
+    </a>
+    <a class="glass-btn" href="https://bruceli2015.github.io/voice4/" target="_blank">
+        <span class="btn-text">voice4</span>
+    </a>
+    <a class="glass-btn" href="https://bruceli2015.github.io/click/" target="_blank">
+        <span class="btn-text">click</span>
+    </a>
+</body>
+</html>
